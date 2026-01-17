@@ -37,6 +37,7 @@
 
 <div class="content">
 
+  <!-- HOME GRID -->
   <div id="home">
     <div class="games-grid">
 
@@ -56,18 +57,13 @@
         <div class="game-label">Flappy Bird</div>
       </div>
 
-     <!-- MINECRAFT CLASSIC PAGE -->
-<div id="minecraft" class="game-page">
-  <iframe class="game-frame" src="minecraft.html" scrolling="no"></iframe>
-  <div class="review">
-    <strong>How to Play</strong><br><br>
-    Build, explore, and create freely in this classic version of Minecraft. Place and break blocks, design structures, and let your imagination run wild.<br><br>
-    <strong>Controls</strong><br><br>
-    W/A/S/D to move, mouse to look, left-click to break, right-click to place blocks.<br><br>
-    <strong>Developer's Review</strong><br><br>
-    Minecraft Classic is timeless, letting you create and explore with zero distractions. Perfect for quick sessions or long creative hours. <strong>5/5 stars</strong>.
-  </div>
-</div>
+      <!-- MINECRAFT -->
+      <div class="game-card-container" onclick="openGame('minecraft')">
+        <div class="game-card">
+          <img src="https://i.pinimg.com/736x/bd/cb/64/bdcb6414071ce880f3fa1dc18e2eda5b.jpg" alt="Minecraft Classic">
+        </div>
+        <div class="game-label">Minecraft Classic</div>
+      </div>
 
       <!-- TAG -->
       <div class="game-card-container" onclick="openGame('tag')">
@@ -106,16 +102,16 @@
     </div>
   </div>
 
-  <!-- MINECRAFT CLASSIC PAGE -->
+  <!-- MINECRAFT PAGE -->
   <div id="minecraft" class="game-page">
-    <iframe class="game-frame" src="eaglercraft.html" scrolling="no"></iframe>
+    <iframe class="game-frame" src="minecraft.html" scrolling="no"></iframe>
     <div class="review">
       <strong>How to Play</strong><br><br>
-      Build, explore, and create freely in this classic version of Minecraft.<br><br>
+      Build, explore, and create freely in this classic version of Minecraft. Place and break blocks, design structures, and let your imagination run wild.<br><br>
       <strong>Controls</strong><br><br>
       W/A/S/D to move, mouse to look, left-click to break, right-click to place blocks.<br><br>
       <strong>Developer's Review</strong><br><br>
-      Timeless creativity with no distractions. <strong>5/5 stars</strong>.
+      Minecraft Classic is timeless, letting you create and explore with zero distractions. Perfect for quick sessions or long creative hours. <strong>5/5 stars</strong>.
     </div>
   </div>
 
@@ -156,3 +152,4 @@ function showHome() {
 
 </body>
 </html>
+
