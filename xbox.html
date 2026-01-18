@@ -11,46 +11,38 @@
       background: #0f0f0f;
       font-family: Arial, sans-serif;
       color: white;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      text-align: center;
     }
 
-    .top-bar {
-      height: 60px;
-      background: #111;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      border-bottom: 1px solid #222;
-    }
-
-    .back-btn {
+    a {
+      background: #107c10;
       color: white;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
       text-decoration: none;
-      margin-right: 20px;
-      font-size: 14px;
     }
 
-    .game-container {
-      width: 100%;
-      height: calc(100vh - 60px);
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    a:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
 
-  <div class="top-bar">
-    <a href="index.html" class="back-btn">← Home</a>
-    <div>Xbox Cloud Gaming</div>
-  </div>
-
-  <div class="game-container">
-    <iframe src="https://www.xbox.com/en-US/play"></iframe>
+  <div>
+    <h1>Xbox Cloud Gaming</h1>
+    <p>Xbox Cloud Gaming can’t run inside this site.</p>
+    <p>Click below to launch it.</p><br>
+    <a href="https://www.xbox.com/en-US/play" target="_blank">
+      Launch Xbox Cloud Gaming
+    </a>
   </div>
 
 </body>
 </html>
+
