@@ -11,19 +11,97 @@
 <link rel="icon" href="https://png.pngtree.com/png-clipart/20221219/ourmid/pngtree-pencil-clipart-png-image_6529094.png" type="image/png">
 
 <style>
-  body { margin:0; font-family: system-ui, Arial, sans-serif; background:#0f1220; color:#fff; }
-  .topbar { position: fixed; top:0; left:0; right:0; height:60px; background:#11162b; display:flex; align-items:center; padding:0 16px; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.3); }
-  .title { font-size:20px; font-weight:600; }
-  .content { padding:100px 24px 40px; max-width:1200px; margin:auto; }
-  .games-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:24px; justify-items:center; }
-  .game-card-container { display:flex; flex-direction:column; align-items:center; cursor:pointer; }
-  .game-card { width:200px; height:200px; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.35); transition:transform 0.2s ease, box-shadow 0.2s ease; }
-  .game-card:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(0,0,0,0.5); }
-  .game-card img { width:100%; height:100%; object-fit:contain; display:block; background:#000; }
-  .game-label { width:200px; text-align:center; background:#1c223c; padding:6px 0; font-size:16px; font-weight:600; color:#fff; border-radius:0 0 14px 14px; margin-top:0; }
-  @media (max-width:1000px) { .game-card, .game-label { width:100%; } }
+  body { 
+    margin:0; 
+    font-family: system-ui, Arial, sans-serif; 
+    background:#0f1220; 
+    color:#fff; 
+  }
+
+  .topbar { 
+    position: fixed; 
+    top:0; 
+    left:0; 
+    right:0; 
+    height:60px; 
+    background:#11162b; 
+    display:flex; 
+    align-items:center; 
+    padding:0 16px; 
+    z-index:1000; 
+    box-shadow:0 2px 10px rgba(0,0,0,0.3); 
+  }
+
+  .title { 
+    font-size:20px; 
+    font-weight:600; 
+  }
+
+  .content { 
+    padding:100px 24px 40px; 
+    max-width:1200px; 
+    margin:auto; 
+  }
+
+  /* 🔥 GRID ADJUSTED FOR 125px ICONS */
+  .games-grid { 
+    display:grid; 
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+    gap:20px; 
+    justify-items:center; 
+  }
+
+  .game-card-container { 
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    cursor:pointer; 
+  }
+
+  /* ✅ ICON SIZE */
+  .game-card { 
+    width:125px; 
+    height:125px; 
+    border-radius:14px; 
+    overflow:hidden; 
+    box-shadow:0 8px 20px rgba(0,0,0,0.35); 
+    transition:transform 0.2s ease, box-shadow 0.2s ease; 
+  }
+
+  .game-card:hover { 
+    transform:translateY(-4px); 
+    box-shadow:0 12px 28px rgba(0,0,0,0.5); 
+  }
+
+  .game-card img { 
+    width:100%; 
+    height:100%; 
+    object-fit:contain; 
+    display:block; 
+    background:#000; 
+  }
+
+  /* ✅ LABEL MATCHES ICON WIDTH */
+  .game-label { 
+    width:125px; 
+    text-align:center; 
+    background:#1c223c; 
+    padding:6px 0; 
+    font-size:14px; 
+    font-weight:600; 
+    color:#fff; 
+    border-radius:0 0 12px 12px; 
+    margin-top:0; 
+  }
+
+  @media (max-width:1000px) { 
+    .game-card, .game-label { 
+      width:125px; 
+    } 
+  }
 </style>
 </head>
+
 <body>
 
 <div class="topbar">
@@ -84,17 +162,18 @@
     </div>
 
     <!-- KIRKA.IO -->
-<div class="game-card-container">
-  <a href="kirka.html">
-    <div class="game-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSItdGiUA3TU-r1TudkOqhFIOAzRYF0Lxyr_g&s" alt="Kirka.io">
+    <div class="game-card-container">
+      <a href="kirka.html">
+        <div class="game-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSItdGiUA3TU-r1TudkOqhFIOAzRYF0Lxyr_g&s" alt="Kirka.io">
+        </div>
+        <div class="game-label">Kirka.io</div>
+      </a>
     </div>
-    <div class="game-label">Kirka.io</div>
-  </a>
-</div>
 
   </div>
 </div>
 
 </body>
 </html>
+
