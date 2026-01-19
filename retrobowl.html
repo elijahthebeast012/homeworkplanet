@@ -5,17 +5,7 @@
   <title>Retro Bowl</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- jQuery (required by game code) -->
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $("button").click(function () {
-        $("#splash").hide();
-        $("#game").show();
-      });
-    });
-  </script>
+  <link rel="icon" href="https://png.pngtree.com/png-clipart/20221219/ourmid/pngtree-pencil-clipart-png-image_6529094.png">
 
   <style>
     html, body {
@@ -23,92 +13,43 @@
       padding: 0;
       width: 100%;
       height: 100%;
+      background: #0f1220;
       overflow: hidden;
-      background: #000;
       font-family: system-ui, Arial, sans-serif;
     }
 
-    /* 🔗 HOME LOGO */
+    /* 🔗 GLOBAL HOME LOGO */
     .site-logo {
       position: fixed;
-      top: 50%;
-      left: 24px;
-      transform: translateY(-50%);
+      top: 12px;
+      left: 16px;
       z-index: 9999;
     }
 
     .site-logo img {
-      height: 44px;
+      height: 72px;
       cursor: pointer;
       transition: transform 0.15s ease, filter 0.15s ease;
     }
 
     .site-logo img:hover {
-      transform: scale(1.05);
       filter: drop-shadow(0 0 8px rgba(120,160,255,0.8));
+      transform: scale(1.05);
     }
 
-    /* SPLASH SCREEN */
-    .splash-background {
-      width: 100%;
-      height: 100%;
-      background: grey;
-      position: relative;
-    }
-
-    .splash-box {
-      position: absolute;
-      width: 260px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(15,15,15,.6);
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .splash-image {
-      height: 150px;
-      border-radius: 6px;
-      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ46HgUizPW9eKLlyTRAOFvaR2NKAn9TX5Ckg&s");
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 12px;
-    }
-
-    .play-btn {
-      font-size: 20px;
-      font-weight: 700;
-      padding: .6rem 1.6rem;
-      border-radius: 16px;
-      border: none;
-      cursor: pointer;
-      background: #92BD14;
-      color: #fff;
-      transition: transform .2s ease, background .2s ease;
-    }
-
-    .play-btn:hover {
-      background: #B5EF0E;
-      transform: scale(1.1);
-    }
-
-    /* GAME */
-    #game {
-      display: none;
+    .game-container {
       width: 100%;
       height: 100%;
     }
 
-    #game iframe {
+    iframe {
       width: 100%;
       height: 100%;
       border: none;
+      background: #000;
     }
   </style>
 </head>
-
 <body>
 
   <!-- 🔗 HOME LOGO -->
@@ -116,20 +57,11 @@
     <img src="https://i.imgur.com/QXhoS1t.png" alt="Homework Planet Home">
   </a>
 
-  <!-- SPLASH -->
-  <div id="splash" class="splash-background">
-    <div class="splash-box">
-      <div class="splash-image"></div>
-      <button class="play-btn">Play Now</button>
-    </div>
-  </div>
-
-  <!-- GAME -->
-  <div id="game">
+  <div class="game-container">
     <iframe
-      src="https://game316009.konggames.com/gamez/0031/6009/live/index.html"
-      allowfullscreen
-      scrolling="no">
+      src="https://azgames.io/retro-bowl.embed"
+      scrolling="no"
+      allowfullscreen>
     </iframe>
   </div>
 
