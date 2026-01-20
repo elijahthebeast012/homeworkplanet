@@ -16,6 +16,29 @@
   })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
 </script>
 
+<!-- 🚫 ADBLOCK DETECTION -->
+<script>
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    if (sessionStorage.getItem("adblockChecked")) return;
+    sessionStorage.setItem("adblockChecked", "1");
+
+    const bait = document.createElement("div");
+    bait.className = "adsbox ad-banner ad-placement";
+    bait.style.position = "absolute";
+    bait.style.left = "-999px";
+    document.body.appendChild(bait);
+
+    setTimeout(function () {
+      if (bait.offsetHeight === 0) {
+        document.getElementById("adblock-overlay").style.display = "flex";
+      }
+      bait.remove();
+    }, 200);
+  });
+})();
+</script>
+
 <style>
   body { 
     margin: 0; 
@@ -126,10 +149,64 @@
     font-weight: 600; 
     border-radius: 0 0 12px 12px; 
   }
+
+  /* 🚫 ADBLOCK OVERLAY */
+  #adblock-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,12,30,0.96);
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+
+  #adblock-box {
+    max-width: 420px;
+    background: #1c223c;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+
+  #adblock-box h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  #adblock-box p {
+    opacity: 0.85;
+    line-height: 1.5;
+  }
+
+  #adblock-box button {
+    margin-top: 16px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #ff5e5e;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+  }
 </style>
 </head>
 
 <body>
+
+<!-- 🚫 ADBLOCK MESSAGE -->
+<div id="adblock-overlay">
+  <div id="adblock-box">
+    <h2>Please support Homework Planet ❤️</h2>
+    <p>
+      Ads help keep this site free and unblocked at school.<br>
+      Please disable your ad blocker or whitelist Homework Planet.
+    </p>
+    <button onclick="location.reload()">I disabled it</button>
+  </div>
+</div>
 
 <!-- 🏠 HOME LOGO -->
 <a href="home.html" class="site-logo">
@@ -141,6 +218,9 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Ko-fi_Logo.png" alt="Ko-fi">
   <span>Support Homework Planet</span>
 </a>
+
+<div class="content">
+  <div class="games-grid">
 
 <div class="content">
   <div class="games-grid">
