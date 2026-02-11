@@ -180,11 +180,60 @@ body {
 .game-card-container:hover .game-desc {
   opacity: 1;
 }
+
+  .search-bar-fixed {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+
+  width: 220px;
+  padding: 10px 14px;
+
+  border-radius: 14px;
+  border: 1px solid transparent;
+
+  background: #1c223c;
+  color: white;
+  font-size: 13px;
+
+  outline: none;
+  z-index: 9999;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* hover animation */
+.search-bar-fixed:hover {
+  border-color: #4f7cff;
+  box-shadow: 0 0 10px rgba(79, 124, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+/* when typing */
+.search-bar-fixed:focus {
+  border-color: #4f7cff;
+  box-shadow: 0 0 14px rgba(79, 124, 255, 0.55);
+}
+
+.search-bar-fixed::placeholder {
+  color: #9aa0c4;
+}
   
 </style>
 </head>
 
 <body>
+  
+  <input 
+  type="text"
+  id="gameSearch"
+  placeholder="Search games…"
+  onkeyup="searchGames()"
+  class="search-bar-fixed"
+/>
 
 <div id="adblock-overlay">
   <div>
@@ -679,6 +728,27 @@ body {
 
   </div>
 </div>
+
+  <script>
+function searchGames() {
+  const input = document
+    .getElementById("gameSearch")
+    .value
+    .toLowerCase();
+
+  const games = document.querySelectorAll(".game-card-container");
+
+  games.forEach(game => {
+    const text = game.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      game.style.display = "";
+    } else {
+      game.style.display = "none";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
